@@ -16,6 +16,38 @@ This is a simple to-do list app that allows you to add, remove, and mark tasks a
 > When using C3 to create this project, select "no" when it asks if you want to deploy. You need to follow this project's [setup steps](https://github.com/cloudflare/templates/tree/main/to-do-list-kv-template#setup-steps) before deploying.
 
 <!-- dash-content-end -->
+```
+readtalk/pro/
+├── app/
+│   ├── entry.client.tsx
+│   ├── entry.server.tsx
+│   ├── root.tsx
+│   ├── tailwind.css
+│   ├── to-do-manager.ts
+│   └── routes/
+│       ├── _index.tsx
+│       └── $id.tsx
+├── public/
+│   └── .assetsignore
+├── test/
+│   ├── env.ts
+│   ├── to-do-manager.test.ts
+│   └── tsconfig.json
+├── .eslintrc.js
+├── .gitignore
+├── load-context.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.js
+├── README.md
+├── server.ts
+├── tailwind.config.ts
+├── tsconfig.json
+├── vite.config.ts
+├── vitest.config.ts
+├── worker-configuration.d.ts
+└── wrangler.jsonc
+```
 
 ## Getting Started
 
