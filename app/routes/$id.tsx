@@ -62,14 +62,14 @@ export default function () {
 					<input
 						type="text"
 						name="text"
-						className="flex-1 rounded-lg border-blue-300 dark:border-blue-700 dark:bg-blue-800 dark:text-white shadow-sm px-4 py-2"
+						className="flex-1 rounded-lg border-grey-300 dark:border-grey-700 dark:bg-grey-800 dark:text-white shadow-sm px-4 py-2"
 						placeholder="create room..."
 					/>
 					<button
 						type="submit"
 						name="intent"
 						value="create"
-						className="bg-grey-500 text-white px-4 py-2 rounded-lg hover:bg-grey-600 transition"
+						className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
 					>
 						💬 Create
 					</button>
@@ -87,11 +87,11 @@ export default function () {
 									type="submit"
 									name="intent"
 									value="toggle"
-									className="text-gray-500 hover:text-blue-500"
+									className="text-blue-500 hover:text-grey-500"
 								>
 									<span
 										className={
-											todo.completed ? "line-through text-gray-400" : ""
+											todo.completed ? "line-through text-blue-400" : ""
 										}
 									>
 										{todo.text}
