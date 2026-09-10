@@ -54,24 +54,24 @@ export default function () {
 	return (
 		<div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-8 px-4">
 			<div className="max-w-md mx-auto">
-				<h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-8">
-					Durable Object Room List
-				</h2>
+				<h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-8">
+					Todo List
+				</h1>
 
 				<form method="post" className="mb-8 flex gap-2">
 					<input
 						type="text"
 						name="text"
-						className="flex-1 rounded-lg border-grey-300 dark:border-grey-700 dark:bg-grey-800 dark:text-white shadow-sm px-4 py-2"
-						placeholder="create room..."
+						className="flex-1 rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white shadow-sm px-4 py-2"
+						placeholder="Add a new todo..."
 					/>
 					<button
 						type="submit"
 						name="intent"
 						value="create"
-						className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
+						className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
 					>
-						💬 Create
+						Add
 					</button>
 				</form>
 
@@ -87,11 +87,11 @@ export default function () {
 									type="submit"
 									name="intent"
 									value="toggle"
-									className="text-blue-500 hover:text-grey-500"
+									className="text-gray-500 hover:text-blue-500"
 								>
 									<span
 										className={
-											todo.completed ? "line-through text-blue-400" : ""
+											todo.completed ? "line-through text-gray-400" : ""
 										}
 									>
 										{todo.text}
@@ -107,7 +107,7 @@ export default function () {
 									value="delete"
 									className="text-red-500 hover:text-red-700"
 								>
-									❌ Delete
+									Delete
 								</button>
 							</form>
 						</li>
