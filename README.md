@@ -17,7 +17,7 @@ This is a simple to-do list app that allows you to add, remove, and mark tasks a
 
 <!-- dash-content-end -->
 ```
-readtalk/pro/
+root/
 ├── app/
 │   ├── entry.client.tsx
 │   ├── entry.server.tsx
