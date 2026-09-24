@@ -2,7 +2,7 @@ import {
 	type LoaderFunctionArgs,
 	type ActionFunctionArgs,
 } from "@remix-run/cloudflare";
-import { useLoaderData } from "@remix-run/react";
+import { useLoaderData, Form } from "@remix-run/react";
 import { TodoManager } from "~/to-do-manager";
 
 export const loader = async ({ params, context }: LoaderFunctionArgs) => {
@@ -55,25 +55,25 @@ export default function () {
 		<div className="min-h-screen bg-gray-100 dark:bg-gray-900 py-8 px-4">
 			<div className="max-w-md mx-auto">
 				<h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-8">
-					Todo List
+					READTalk
 				</h1>
 
-				<form method="post" className="mb-8 flex gap-2">
+				<Form method="post" className="mb-8 flex gap-2">
 					<input
 						type="text"
 						name="text"
 						className="flex-1 rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white shadow-sm px-4 py-2"
-						placeholder="Add a new todo..."
+						placeholder="To-Do-List"
 					/>
 					<button
 						type="submit"
 						name="intent"
 						value="create"
-						className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+						className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
 					>
-						Add
+						+
 					</button>
-				</form>
+				</Form>
 
 				<ul className="space-y-2">
 					{todos.map((todo) => (
@@ -81,13 +81,13 @@ export default function () {
 							key={todo.id}
 							className="flex items-center gap-2 bg-white dark:bg-gray-800 p-4 rounded-lg shadow"
 						>
-							<form method="post" className="flex-1 flex items-center gap-2">
+							<Form method="post" className="flex-1 flex items-center gap-2">
 								<input type="hidden" name="id" value={todo.id} />
 								<button
 									type="submit"
 									name="intent"
 									value="toggle"
-									className="text-gray-500 hover:text-blue-500"
+									className="text-blue-500 hover:text-gray-500"
 								>
 									<span
 										className={
@@ -97,9 +97,9 @@ export default function () {
 										{todo.text}
 									</span>
 								</button>
-							</form>
+							</Form>
 
-							<form method="post">
+							<Form method="post">
 								<input type="hidden" name="id" value={todo.id} />
 								<button
 									type="submit"
@@ -107,9 +107,9 @@ export default function () {
 									value="delete"
 									className="text-red-500 hover:text-red-700"
 								>
-									Delete
+									delete
 								</button>
-							</form>
+							</Form>
 						</li>
 					))}
 				</ul>
