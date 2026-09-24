@@ -63,7 +63,7 @@ export default function () {
 						type="text"
 						name="text"
 						className="flex-1 rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white shadow-sm px-4 py-2"
-						placeholder="To-Do-List"
+						placeholder="Durable-Object-List"
 					/>
 					<button
 						type="submit"
@@ -107,7 +107,7 @@ export default function () {
 									value="delete"
 									className="text-red-500 hover:text-red-700"
 								>
-									delete
+									❌
 								</button>
 							</Form>
 						</li>
